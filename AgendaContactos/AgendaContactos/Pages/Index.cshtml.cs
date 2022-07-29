@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*Esta es la pagina modelo para la vista Index, todas las vistas
+razor tienen su propia pagina modelo para controlar la logica
+que se necesite en la pagina*/
+
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AgendaContactos.Pages {
