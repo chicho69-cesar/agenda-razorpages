@@ -36,9 +36,15 @@
                         <td>@Html.DisplayFor(c => categorie.Name)</td>
                         <td>@Html.DisplayFor(c => categorie.CreationDate)</td>
                         <td>
-                            <a class="col-3 btn btn-success" asp-page="../Categories/Detail" asp-route-id="@categorie.Id">Detalle</a>
-                            <a class="col-3 offset-1 btn btn-warning" asp-page="../Categories/Edit" asp-route-id="@categorie.Id">Editar</a>
-                            <a class="col-3 offset-1 btn btn-danger" asp-page="../Categories/Delete" asp-route-id="@categorie.Id">Borrar</a>
+                            <a class="col-3 btn btn-success" asp-page="../Categories/Detail" asp-route-id="@categorie.Id">
+                                <i class="bi bi-info-square"></i>
+                            </a>
+                            <a class="col-3 offset-1 btn btn-warning" asp-page="../Categories/Edit" asp-route-id="@categorie.Id">
+                                <i class="bi bi-pencil-fill"></i>
+                            </a>
+                            <a class="col-3 offset-1 btn btn-danger" asp-page="../Categories/Delete" asp-route-id="@categorie.Id">
+                                <i class="bi bi-trash3"></i>
+                            </a>
                         </td>
                     </tr>
                 }

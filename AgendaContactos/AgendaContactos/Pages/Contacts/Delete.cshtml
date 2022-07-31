@@ -1,0 +1,48 @@
+﻿@page
+@model AgendaContactos.Pages.Contacts.DeleteModel
+
+@{
+    ViewData["Title"] = "Eliminar contacto";
+}
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-8 offset-2">
+            <h2 class="text-info mb-2">
+                Detalles del contacto: @Model.Contact.Id
+            </h2>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <strong>Id: </strong>@Model.Contact.Id
+                </li>
+                <li class="list-group-item">
+                    <strong>Nombre: </strong>@Model.Contact.Name
+                </li>
+                <li class="list-group-item">
+                    <strong>Email: </strong>@Model.Contact.Email
+                </li>
+                <li class="list-group-item">
+                    <strong>Telefono: </strong>@Model.Contact.PhoneNumber
+                </li>
+                <li class="list-group-item">
+                    <strong>Categoria: </strong>@Model.Contact.Category.Name
+                </li>
+                <li class="list-group-item">
+                    <strong>Fecha de creacion: </strong>@Model.Contact.CreationDate
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form method="post" class="form">
+                <input type="hidden" asp-for="Contact.Id"/>
+
+                <button type="submit" class="col-4 offset-2 btn btn-danger">Borrar</button>
+                <a asp-page="Index" class="col-4 btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
